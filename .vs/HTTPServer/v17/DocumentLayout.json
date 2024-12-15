@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Server.cpp",
+              "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp",
+              "RelativeDocumentMoniker": "HTTPServer\\Server.cpp",
+              "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp",
+              "RelativeToolTip": "HTTPServer\\Server.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-15T12:13:34.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.h",
+              "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
+              "RelativeDocumentMoniker": "HTTPServer\\Server.h",
+              "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
+              "RelativeToolTip": "HTTPServer\\Server.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-15T12:13:12.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp",
+              "RelativeDocumentMoniker": "HTTPServer\\main.cpp",
+              "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp",
+              "RelativeToolTip": "HTTPServer\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T12:21:52.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

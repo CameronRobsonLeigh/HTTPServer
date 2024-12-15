@@ -1,0 +1,5 @@
+﻿  main.cpp
+  Server.cpp
+C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(98,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  HTTPServer.vcxproj -> C:\Users\Camer\source\repos\HTTPServer\x64\Debug\HTTPServer.exe
