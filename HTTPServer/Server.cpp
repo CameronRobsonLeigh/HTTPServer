@@ -45,6 +45,7 @@ bool Server::bindSocket() {
     return true;
 }
 
+// the backlog is a "waiting room" for clients, if the server is busy processing, the new client waits in the room.
 bool Server::startListening(int backlog) {
     if (listen(serverSocket, backlog) == SOCKET_ERROR) {
         std::cerr << "Listen failed" << std::endl;

@@ -16,6 +16,7 @@ int main()
         return 1;
     }
 
+    // always set to true so we are always listening to clients.
     while (true) {
         server.acceptClient();
     }
