@@ -2,7 +2,8 @@
 #include <iostream>
 #include <WS2tcpip.h>
 #include <sstream>
-
+#include <map>
+#include <algorithm>
 #pragma comment(lib, "ws2_32.lib")
 
 Server::Server(int port) : port(port), serverSocket(INVALID_SOCKET) {
@@ -90,15 +91,115 @@ void Server::handleRequest(SOCKET clientSocket) {
         std::cout << "HTTP Method: " << method << std::endl;
         std::cout << "Requested Path: " << path << std::endl;
 
-        std::string response =
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html\r\n"
-            "Content-Length: 13\r\n"
-            "\r\n"
-            "Hello, world!";
-        send(clientSocket, response.c_str(), response.size(), 0);
+        if (method == "POST") {
+            handlePostRequest(clientSocket, requestStream, buffer + bytesReceived);
+        }
+        else if (method == "GET") {
+            handleGetRequest(clientSocket, path);
+        }
+        else {
+            // Default response for unsupported methods
+            std::string response =
+                "HTTP/1.1 405 Method Not Allowed\r\n"
+                "Content-Length: 0\r\n"
+                "\r\n";
+            send(clientSocket, response.c_str(), response.size(), 0);
+        }
     }
     else {
         std::cerr << "Failed to receive data from client" << std::endl;
     }
+}
+
+void Server::handleGetRequest(SOCKET clientSocket, const std::string& path) {
+    // Parse query string if present
+    size_t queryPos = path.find("?");
+    std::string queryString;
+    if (queryPos != std::string::npos) {
+        queryString = path.substr(queryPos + 1);
+    }
+
+    // Parse query string into key-value pairs
+    std::map<std::string, std::string> queryParams;
+    std::istringstream queryStream(queryString);
+    std::string pair;
+    while (std::getline(queryStream, pair, '&')) {
+        size_t equalsPos = pair.find("=");
+        if (equalsPos != std::string::npos) {
+            std::string key = pair.substr(0, equalsPos);
+            std::string value = pair.substr(equalsPos + 1);
+            queryParams[key] = value;
+        }
+    }
+
+    // Print the parsed parameters
+    for (const auto& param : queryParams) {
+        std::cout << "Query Parameter: " << param.first << " = " << param.second << std::endl;
+    }
+
+    // Send response
+    std::string response =
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/html\r\n"
+        "Content-Length: 13\r\n"
+        "Hello, GET!";
+    send(clientSocket, response.c_str(), response.size(), 0);
+}
+
+
+void Server::handlePostRequest(SOCKET clientSocket, std::istringstream& requestStream, const char* requestData) {
+    std::string line;
+    std::string contentLengthStr;
+    size_t contentLength = 0;
+     bool contentLengthFound = false;  // To track if Content-Length header is found
+
+     // Parse headers to find Content-Length
+     while (std::getline(requestStream, line) && line != "\r") {
+         // Check for an empty line which marks the end of the headers
+         std::cout << "Parsing Line: '" << line << "'" << std::endl;
+         if (line.empty()) {
+             break;  // End of headers
+         }
+
+         // Look for the Content-Length header
+         if (line.find("Content-Length:") == 0) {
+             contentLengthStr = line.substr(15);  // Get the value after "Content-Length:"
+             contentLength = std::stoul(contentLengthStr);  // Convert to size_t
+             contentLengthFound = true;
+             contentLengthStr.erase(contentLengthStr.find_last_not_of(" \r\n") + 1);  // Trim spaces/newlines
+         }
+     }
+
+     // Read the body
+     std::string body;
+     if (contentLength > 0) {
+         char* bodyBuffer = new char[contentLength + 1];
+         int totalBytesRead = 0;
+
+         while (totalBytesRead < contentLength) {
+             int bytesRead = recv(clientSocket, bodyBuffer + totalBytesRead, contentLength - totalBytesRead, 0);
+             if (bytesRead <= 0) {
+                 break; // Error or client disconnected
+             }
+             totalBytesRead += bytesRead;
+         }
+
+         bodyBuffer[totalBytesRead] = '\0';
+         body = bodyBuffer; // Convert buffer to string
+         delete[] bodyBuffer;
+     }
+
+     std::cout << "POST Body:\n" << body << std::endl;
+
+    // Create a dynamic response including the received POST body
+    std::string responseBody = "<html><body><h1>Received Data</h1><p>" + body + "</p></body></html>";
+    std::string response =
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/html\r\n"
+        "Content-Length: " + std::to_string(responseBody.size()) + "\r\n"
+        "\r\n" +
+        responseBody;
+
+    // Send the response
+    send(clientSocket, response.c_str(), response.size(), 0);
 }

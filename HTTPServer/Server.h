@@ -22,6 +22,8 @@ public:
     bool startListening(int backlog = 5);
     void acceptClient();
     void handleRequest(SOCKET clientSocket);
+    void handleGetRequest(SOCKET clientSocket, const std::string& path);
+    void handlePostRequest(SOCKET clientSocket, std::istringstream& requestStream, const char* requestData);
 
 private:
     int port;

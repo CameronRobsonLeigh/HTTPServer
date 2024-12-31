@@ -3,12 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|solutionrelative:HTTPServer\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xstring||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F66A7E6E-9650-46AB-AC91-B828222970AF}|HTTPServer\\HTTPServer.vcxproj|C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,42 +33,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Server.cpp",
               "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp",
               "RelativeDocumentMoniker": "HTTPServer\\Server.cpp",
               "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.cpp",
               "RelativeToolTip": "HTTPServer\\Server.cpp",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAACwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAawKoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-15T12:13:34.506Z",
+              "WhenOpened": "2024-12-17T17:15:36.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Server.h",
-              "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
-              "RelativeDocumentMoniker": "HTTPServer\\Server.h",
-              "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
-              "RelativeToolTip": "HTTPServer\\Server.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-15T12:13:12.672Z",
-              "EditorCaption": ""
+              "Title": "xstring",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xstring",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xstring",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xstring",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xstring",
+              "ViewState": "AgIAAPMBAAAAAAAAAAAYwAQCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-17T17:13:25.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp",
               "RelativeDocumentMoniker": "HTTPServer\\main.cpp",
               "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\main.cpp",
               "RelativeToolTip": "HTTPServer\\main.cpp",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-14T12:21:52.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T12:21:52.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Server.h",
+              "DocumentMoniker": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
+              "RelativeDocumentMoniker": "HTTPServer\\Server.h",
+              "ToolTip": "C:\\Users\\Camer\\source\\repos\\HTTPServer\\HTTPServer\\Server.h",
+              "RelativeToolTip": "HTTPServer\\Server.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-15T12:13:12.672Z"
             }
           ]
         }
