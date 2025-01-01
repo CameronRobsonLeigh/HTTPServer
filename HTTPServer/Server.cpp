@@ -4,7 +4,12 @@
 #include <sstream>
 #include <map>
 #include <algorithm>
+#include <thread>
+#include <mutex>
 #pragma comment(lib, "ws2_32.lib")
+
+
+std::mutex outputMutex; // Mutex for thread-safe output
 
 Server::Server(int port) : port(port), serverSocket(INVALID_SOCKET) {
     ZeroMemory(&serverAddr, sizeof(serverAddr));
@@ -59,6 +64,7 @@ bool Server::startListening(int backlog) {
 void Server::acceptClient() {
     sockaddr_in clientAddr;
     int clientAddrSize = sizeof(clientAddr);
+
     SOCKET clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientAddrSize);
 
     if (clientSocket == INVALID_SOCKET) {
@@ -70,11 +76,29 @@ void Server::acceptClient() {
     inet_ntop(AF_INET, &clientAddr.sin_addr, clientIP, INET_ADDRSTRLEN);
     unsigned short clientPort = ntohs(clientAddr.sin_port);
 
-    std::cout << "Client connected: " << clientIP << ":" << clientPort << std::endl;
+    // each client connection is passed to a new thread.
+    std::thread clientThread(&Server::handleClient, this, clientSocket, std::string(clientIP), clientPort);
+    clientThread.detach(); // Allow thread to run independently
+}
+
+void Server::handleClient(SOCKET clientSocket, std::string clientIP, unsigned short clientPort) {
+
+    {
+        std::lock_guard<std::mutex> lock(outputMutex);
+        std::cout << "Client connected: " << clientIP << ":" << clientPort << std::endl;
+    }
 
     handleRequest(clientSocket);
+
+    {
+        std::lock_guard<std::mutex> lock(outputMutex);
+        std::cout << "Client disconnected: " << clientIP << ":" << clientPort << std::endl;
+    }
+
     closesocket(clientSocket);
 }
+
+
 
 void Server::handleRequest(SOCKET clientSocket) {
     char buffer[1024];

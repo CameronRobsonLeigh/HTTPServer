@@ -1,6 +1,8 @@
 ﻿  Server.cpp
-C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(106,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(146,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(180,92): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(204,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(130,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(170,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(204,92): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Camer\source\repos\HTTPServer\HTTPServer\Server.cpp(228,55): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   HTTPServer.vcxproj -> C:\Users\Camer\source\repos\HTTPServer\x64\Debug\HTTPServer.exe

@@ -3,6 +3,7 @@
 
 #include <winsock2.h>
 #include <string>
+#include <mutex>
 
 // Visualization of socket connections
 // 1. Listening Socket
@@ -16,10 +17,10 @@ class Server {
 public:
     Server(int port); // constructor declaration
     ~Server(); // destructor declaration
-
     bool initialize();
     bool bindSocket();
     bool startListening(int backlog = 5);
+    void handleClient(SOCKET clientSocket, std::string clientIP, unsigned short clientPort);
     void acceptClient();
     void handleRequest(SOCKET clientSocket);
     void handleGetRequest(SOCKET clientSocket, const std::string& path);

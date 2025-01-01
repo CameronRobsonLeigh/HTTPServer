@@ -13,7 +13,7 @@ int main()
     }
 
     if (!server.startListening()) {
-        return 1;
+        return -1;
     }
 
     // always set to true so we are always listening to clients.
